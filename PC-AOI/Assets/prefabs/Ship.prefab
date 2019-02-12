@@ -315,7 +315,7 @@ MonoBehaviour:
   prefabBullets: {fileID: 6123802977570599169, guid: 6e889cd01ffcd924c94072778d732d3f,
     type: 3}
   bulletFiringTimer: 0.13
-  bulletSpeed: 15
+  bulletSpeed: 10
   direction: {x: 0, y: 1}
 --- !u!50 &8106627832194282396
 Rigidbody2D:
