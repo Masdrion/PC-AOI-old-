@@ -575,10 +575,40 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 8106627832194282399, guid: 503a721ee6a9f374b92d3d9d8f3c7b0c,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8106627832194282399, guid: 503a721ee6a9f374b92d3d9d8f3c7b0c,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8106627832194282399, guid: 503a721ee6a9f374b92d3d9d8f3c7b0c,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8106627832194282399, guid: 503a721ee6a9f374b92d3d9d8f3c7b0c,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
     - target: {fileID: 8106627832194282396, guid: 503a721ee6a9f374b92d3d9d8f3c7b0c,
         type: 3}
       propertyPath: m_Constraints
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8106627832194282396, guid: 503a721ee6a9f374b92d3d9d8f3c7b0c,
+        type: 3}
+      propertyPath: m_LinearDrag
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8106627832194282396, guid: 503a721ee6a9f374b92d3d9d8f3c7b0c,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 503a721ee6a9f374b92d3d9d8f3c7b0c, type: 3}
