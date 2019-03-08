@@ -18,6 +18,10 @@ public class ShootBullet : MonoBehaviour
     {
          StartCoroutine(shootBullets());
     }
+    /// <summary>
+    ///  ewfaefaf
+    /// </summary>
+    /// <returns></returns>
 
 
     IEnumerator shootBullets() {
