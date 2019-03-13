@@ -244,10 +244,10 @@ RectTransform:
   m_Father: {fileID: 660389564}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 480, y: 0}
-  m_SizeDelta: {x: -960, y: 0}
+  m_AnchoredPosition: {x: 107.5, y: 0}
+  m_SizeDelta: {x: -215, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &775574611
 MonoBehaviour:
@@ -386,11 +386,11 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: 0, y: -5.019098}
+  - {x: 2, y: -5.019098}
   - {x: -8, y: -5.019098}
   - {x: -8, y: 5.0135584}
-  - {x: 0, y: 5.013558}
-  - {x: 0, y: -5.019098}
+  - {x: 2, y: 5.013558}
+  - {x: 2, y: -5.019098}
 --- !u!114 &1378433956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -594,6 +594,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8106627832194282399, guid: 503a721ee6a9f374b92d3d9d8f3c7b0c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 8106627832194282396, guid: 503a721ee6a9f374b92d3d9d8f3c7b0c,
         type: 3}

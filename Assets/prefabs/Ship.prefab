@@ -12,12 +12,13 @@ GameObject:
   - component: {fileID: 8106627832194282398}
   - component: {fileID: 8106627832194282393}
   - component: {fileID: 8106627832194282392}
+  - component: {fileID: 5500255176536001016}
   - component: {fileID: 8106627832194282396}
   - component: {fileID: 8436034306109415259}
   - component: {fileID: 1731460311557658550}
   m_Layer: 8
   m_Name: Ship
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -317,6 +318,24 @@ MonoBehaviour:
     type: 3}
   bulletFiringTimer: 0.13
   bulletSpeed: 10
+  direction: {x: 0, y: 1}
+  isFiring: 0
+  autofire: 0
+--- !u!114 &5500255176536001016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8106627832194282395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f9087e978785d44f9677bbfb6011d82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabSlash: {fileID: 8041559407930769392, guid: 8aa675acaa3b3ce4894b2e12be7ead65,
+    type: 3}
+  slashSpeed: 10
   direction: {x: 0, y: 1}
 --- !u!50 &8106627832194282396
 Rigidbody2D:

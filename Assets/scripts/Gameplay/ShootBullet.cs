@@ -13,23 +13,40 @@ public class ShootBullet : MonoBehaviour
 
     public Vector2 direction = new Vector2(0,1);
 
-    // Start is called before the first frame update
-    void Start()
+    public bool isFiring = false;
+    public bool autofire = false;
+    Coroutine firing;
+    private void Update()
     {
-         StartCoroutine(shootBullets());
+        if (!autofire)
+        {
+            if (Input.GetKey(KeyCode.Z) && !isFiring)
+            {
+                isFiring = true;
+                firing = StartCoroutine(shootBullets());
+            }
+            else if (!Input.GetKey(KeyCode.Z) && isFiring)
+            {
+                isFiring = false;
+                StopCoroutine(firing);
+            }
+        }
+        else {
+            if (!isFiring) {
+                isFiring = true;
+                firing = StartCoroutine(shootBullets());
+            }
+        }
     }
-    /// <summary>
-    ///  ewfaefaf
-    /// </summary>
-    /// <returns></returns>
-
 
     IEnumerator shootBullets() {
         while (true)
         {
+            Vector3 bulletPosition= new Vector3(transform.position.x,transform.position.y,0);
+            GameObject bullets = Instantiate(prefabBullets, bulletPosition, Quaternion.identity);
+            Fire fire = bullets.GetComponent<Fire>();
+            fire.FireAttack(direction * bulletSpeed);
             yield return new WaitForSeconds(bulletFiringTimer);
-            GameObject bullets = Instantiate(prefabBullets, transform.position, Quaternion.identity);
-            bullets.GetComponent<BulletsFire>().FireBullet(direction * bulletSpeed);
         }
     }
 }

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5674842413542804817}
   m_Layer: 9
   m_Name: Bullet1
-  m_TagString: Untagged
+  m_TagString: Attacks
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -216,7 +216,7 @@ GameObject:
   - component: {fileID: 8609768117371699579}
   m_Layer: 9
   m_Name: Bullet2
-  m_TagString: Untagged
+  m_TagString: Attacks
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -414,7 +414,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3441756539712665295}
   - component: {fileID: 5951057739936869894}
-  - component: {fileID: 6131779924122619237}
   m_Layer: 0
   m_Name: Bullets
   m_TagString: Untagged
@@ -450,18 +449,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96e82d07162a5e34db5d00f72a639fe3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet1: {fileID: 545247045302953914}
-  bullet2: {fileID: 5974358140029036589}
---- !u!114 &6131779924122619237
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6123802977570599169}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba5323bbe3e74844ebad16415c13f609, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  seconds: 1
+  attacks:
+  - {fileID: 545247045302953914}
+  - {fileID: 5974358140029036589}
+  timer: 1
