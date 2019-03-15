@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 8106627832194282393}
   - component: {fileID: 8106627832194282392}
   - component: {fileID: 5500255176536001016}
-  - component: {fileID: 8106627832194282396}
   - component: {fileID: 8436034306109415259}
+  - component: {fileID: 5661196385890098339}
+  - component: {fileID: 8106627832194282396}
   - component: {fileID: 1731460311557658550}
   m_Layer: 8
   m_Name: Ship
@@ -335,29 +336,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabSlash: {fileID: 8041559407930769392, guid: 8aa675acaa3b3ce4894b2e12be7ead65,
     type: 3}
+  waitText: {fileID: 0}
   slashSpeed: 10
   direction: {x: 0, y: 1}
---- !u!50 &8106627832194282396
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8106627832194282395}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0.5
-  m_AngularDrag: 0.4
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 1
-  m_Constraints: 0
+  timer: 0
 --- !u!114 &8436034306109415259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -372,6 +354,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   move: {x: 0, y: 0, z: 0}
   animator: {fileID: 1731460311557658550}
+  movementSpeed: 14
+  factor: 5
+  changed: 0
+--- !u!114 &5661196385890098339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8106627832194282395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c344a56d775d1b74caa7534f1dfac879, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slow: 0
+--- !u!50 &8106627832194282396
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8106627832194282395}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 10
+  m_AngularDrag: 10
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
 --- !u!95 &1731460311557658550
 Animator:
   serializedVersion: 3
