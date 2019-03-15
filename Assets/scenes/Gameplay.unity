@@ -690,10 +690,5 @@ PrefabInstance:
       propertyPath: waitText
       value: 
       objectReference: {fileID: 1938428899}
-    - target: {fileID: 8436034306109415259, guid: 503a721ee6a9f374b92d3d9d8f3c7b0c,
-        type: 3}
-      propertyPath: factor
-      value: 5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 503a721ee6a9f374b92d3d9d8f3c7b0c, type: 3}
