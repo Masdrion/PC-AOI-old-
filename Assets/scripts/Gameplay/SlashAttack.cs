@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SlashAttack : MonoBehaviour
 {
-    [SerializeField]
-    GameObject prefabSlash;
+    public GameObject prefabSlash;
+    public Text waitText;
+
     GameObject attack;
     [Range(0f, 20f)]
     public float slashSpeed = 10f;
@@ -35,30 +37,42 @@ public class SlashAttack : MonoBehaviour
             }
             else
             {
-                if (!attack.GetComponent<Fire>().IsShot)
+                if (attack != null)
                 {
-                    timer += Time.deltaTime;
-                    attack.transform.localScale = new Vector3(1,1,1)*(1 + 0.5f*timer);
-                    if (timer >= 1)
+                    if (attackStart)
                     {
-                        attack.GetComponent<Fire>().FireAttack(slashSpeed * direction);
-                        StartCoroutine(PauseForSecondAttack());
+                        timer += Time.deltaTime;
+                        attack.transform.localScale = new Vector3(1, 1, 1) * (1 + 0.5f * timer);
+                        if (timer >= 1)
+                        {
+                            Debug.Log("Shooting");
+                            attack.GetComponent<Fire>().FireAttack(slashSpeed * direction);
+                            attack = null;
+                            StartCoroutine(PauseForSecondAttack());
+                        }
+                    }
+                }
+                else {
+                    if (attackStart)
+                    {
+                        waitText.text = "Wait";
                     }
                 }
             }
         }
-        else {
-            attackStart = false;
-            if (attack != null)
-                if (!attack.GetComponent<Fire>().IsShot) {
-                    Debug.Log("Destroying");
-                    attack.GetComponent<Fire>().StartDestroyTimer(0.5f);
-                }
+        else if (Input.GetKeyUp(KeyCode.X))
+        {
+            if (attack != null) {
+                attack.GetComponent<Fire>().StartDestroyTimer(0.5f);
+                attack = null;
+                StartCoroutine(PauseForSecondAttack());
+            }
         }
     }
 
     IEnumerator PauseForSecondAttack() {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(2);
         attackStart = false;
+        waitText.text = "";
     }
 }

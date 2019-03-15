@@ -45,10 +45,10 @@ public class Fire : MonoBehaviour
     }
 
     public void StartDestroyTimer(float seconds) {
-        StartCoroutine(attackDestroy(seconds));
+        StartCoroutine(AttackDestroy(seconds));
     }
 
-    IEnumerator attackDestroy(float seconds)
+    IEnumerator AttackDestroy(float seconds)
     {
         yield return new WaitForSeconds(seconds);
         Destroy(gameObject);
