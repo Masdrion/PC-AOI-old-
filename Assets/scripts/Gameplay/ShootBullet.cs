@@ -16,6 +16,7 @@ public class ShootBullet : MonoBehaviour
     public bool isFiring = false;
     public bool autofire = false;
     Coroutine firing;
+    public string layer;
     private void Update()
     {
         if (!autofire)
@@ -45,7 +46,7 @@ public class ShootBullet : MonoBehaviour
             Vector3 bulletPosition= new Vector3(transform.position.x,transform.position.y,0);
             GameObject bullets = Instantiate(prefabBullets, bulletPosition, Quaternion.identity);
             Fire fire = bullets.GetComponent<Fire>();
-            fire.FireAttack(direction * bulletSpeed);
+            fire.FireAttack(direction * bulletSpeed,layer);
             yield return new WaitForSeconds(bulletFiringTimer);
         }
     }

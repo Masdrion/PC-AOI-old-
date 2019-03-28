@@ -13,9 +13,8 @@ public class SlashAttack : MonoBehaviour
     public float slashSpeed = 10f;
 
     public Vector2 direction = new Vector2(0, 1);
-    
     bool attackStart = false;
-
+    public string layer;
     public float timer=0;
     // Start is called before the first frame update
     void Start()
@@ -46,7 +45,7 @@ public class SlashAttack : MonoBehaviour
                         if (timer >= 1)
                         {
                             Debug.Log("Shooting");
-                            attack.GetComponent<Fire>().FireAttack(slashSpeed * direction);
+                            attack.GetComponent<Fire>().FireAttack(slashSpeed * direction,layer);
                             attack = null;
                             StartCoroutine(PauseForSecondAttack());
                         }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ShipController : MonoBehaviour
 {
@@ -17,6 +18,10 @@ public class ShipController : MonoBehaviour
     public float dashingFactor = 1;
     public float dashingTime = 0.1f;
     public bool dashing=false;
+
+    [Header("HP")]
+    public float HP = 100;
+    public Text HPText;
 
     // Start is called before the first frame update
     void Start()
@@ -105,4 +110,15 @@ public class ShipController : MonoBehaviour
         yield return new WaitForSeconds(1f);
         GetComponent<Collider2D>().enabled = true;
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag.Equals("Attacks"))
+        {
+            Destroy(collision.gameObject);
+            HP -= 20;
+            HPText.text = "HP: " + HP;
+        }
+    }
+    
 }

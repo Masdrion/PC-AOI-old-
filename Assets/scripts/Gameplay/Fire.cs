@@ -36,10 +36,12 @@ public class Fire : MonoBehaviour
         }
     }
 
-    public void FireAttack(Vector3 force) {
+    public void FireAttack(Vector3 force,string layer) {
         isShot = true;
         foreach(GameObject obj in attacks){
             obj.GetComponent<Rigidbody2D>().AddForce(force, ForceMode2D.Impulse);
+            obj.layer = LayerMask.NameToLayer(layer);
+            obj.GetComponent<Rigidbody2D>().mass = 0;
         }
         StartDestroyTimer(timer);
     }
